@@ -351,6 +351,27 @@ body {
         <h1>Medrese</h1>
         Bu sayfada canlı ve güncel bir şekilde Medrese'yi görebilir, anlık olarak takip edebilirsiniz. (<b>NOT</b>: Hava şartları, kar yağışı, elektrik kesintisi vs. gibi sorunlarda yayın kesilebilir. Bu durumda 444 58 44 (bazı yurt dışı ülkelerinde: +90 312 444 58 44) hattını aramanız önemle rica olunur. İyi kullanımlar dileriz :)
         <br><br>
+        <div id="clock"></div> <script type="text/javascript">
+function refrClock()
+{
+var d=new Date();
+var s=d.getSeconds();
+var m=d.getMinutes();
+var h=d.getHours();
+var day=d.getDay();
+var date=d.getDate();
+var month=d.getMonth();
+var year=d.getFullYear();
+var days=new Array("Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi");
+var months=new Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık");
+if (s<10) {s="0" + s}
+if (m<10) {m="0" + m}
+document.getElementById("clock").innerHTML= "<b>Tarih:</b> " + date + " " + months[month] + " " + year + " | <b>Günlerden:</b> " + days[day] + " | <b>Saat:</b> " + h + ":" + m + ":" + s + " "
+setTimeout("refrClock()",1000);
+}
+refrClock();
+</script>
+        <br>
         <hr style="border: none; border-top: 5px solid black;">
        <p><a href="https://embed.galata.ai/embed/5469545a79584351537a773d"><iframe src="https://embed.galata.ai/embed/5469545a79584351537a773d" width="1080" height="610"></iframe></a></p>
     <br><br>
