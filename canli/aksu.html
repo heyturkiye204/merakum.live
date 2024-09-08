@@ -372,8 +372,26 @@ setTimeout("refrClock()",1000);
 refrClock();
 </script>
         <br>
-        <hr style="border: none; border-top: 5px solid black;">
-       <p><a href="https://sivas.bel.tr/Files/iframesehirkamerasi/liveplayer_aksu.html"><iframe src="https://sivas.bel.tr/Files/iframesehirkamerasi/liveplayer_aksu.html" width="1080" height="610" scrolling="no" allowfullscreen="allowfullscreen"></iframe></a></p>
+        <center>
+       <style type="text/css">
+#haber{width: 980px;height: 538px;overflow : hidden;position : relative;border:solid 10px #f0f0f0;margin: 0 auto;}
+#haber iframe {width: 1830px;height: 2000px}
+#frame{position : absolute;top: 0px;left: 0px;}
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+#haber{width: 100%;height: 450px;}
+#haber iframe {width: 1400px;height: 620px;}
+#frame {top: 0px;left: 0px;}
+}
+@media all and (max-width:426px){
+#haber{width: 100%;height: 230px;}
+#haber iframe {width: 630px;height: 620px;}
+#frame {top: 0px;left: 0px;}}
+</style>
+<div id="haber">
+<iframe id="frame" src="https://sivas.bel.tr/Files/iframesehirkamerasi/liveplayer_aksu.html" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+</div>
+</body>
+</center>
     <br><br>
     </div>
     <footer class="footer">
