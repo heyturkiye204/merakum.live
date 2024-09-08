@@ -49,4 +49,20 @@
         <iframe src="https://sivas.bel.tr/Files/iframesehirkamerasi/liveplayer_tekke.html" frameborder="0" allowfullscreen class="iframe5"></iframe>
     </div>
 </body>
+<script>
+// Sayfa yüklendiğinde çalışacak kod
+window.onload = function() {
+    // Mevcut URL'yi al
+    var currentURL = window.location.href;
+
+    // Eğer URL ".html" ile bitiyorsa
+    if (currentURL.endsWith(".html")) {
+        // ".html" kısmını kaldır
+        var newURL = currentURL.slice(0, -5);
+
+        // Yeni URL'ye yönlendir
+        window.location.href = newURL;
+    }
+};
+</script>
 </html>
